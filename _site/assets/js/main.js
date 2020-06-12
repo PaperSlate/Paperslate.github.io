@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     },
     interactivity: {
-      detect_on: "canvas",
+      detect_on: "window",
       events: {
         onhover: {
           enable: true,
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
         grab: {
           distance: 200,
           line_linked: {
-            opacity: 1
+            opacity: 0.5
           }
         },
         bubble: {
@@ -106,48 +106,11 @@ document.addEventListener("DOMContentLoaded", function() {
         remove: {
           particles_nb: 2
         }
-      }
+      },
+      mouse:{}
     },
     retina_detect: true
   });
-  var count_particles, stats, update;
-  stats = new Stats();
-  stats.setMode(0);
-  stats.domElement.style.position = "absolute";
-  stats.domElement.style.left = "0px";
-  stats.domElement.style.top = "0px";
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector(".js-count-particles");
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
 
-  const ctx = document.querySelector('#particles-js > canvas').getContext('2d');
-  let grad;
-  onresize();
-  addEventListener('resize', onresize);
 
-  function onresize() {
-    grad = ctx.createLinearGradient(0, 0, ctx.canvas.width, 0);
-    grad.addColorStop(0, 'yellow');
-    grad.addColorStop(1, 'green');
-  }
-
-  // must be ran after Particles.js' own anim loop has began
-  // se we are always pushed after their drawings
-  requestAnimationFrame(anim);
-
-  function anim() {
-    ctx.fillStyle = grad;
-    ctx.globalCompositeOperation = "source-atop";
-    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    ctx.globalCompositeOperation = "source-over";
-    requestAnimationFrame(anim);
-  }
 }, false);

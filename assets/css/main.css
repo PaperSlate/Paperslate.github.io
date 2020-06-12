@@ -4407,18 +4407,16 @@ body {
 }
 
 article, aside, figcaption, figure, footer, header, nav, section {
-  display: block
+  display: block;
 }
 
-h1, h2, h3, h4, stong {
-  margin-top: 1em;
-  padding-top: 1em;
+h1, h2, h3, h4, strong {
   line-height: 1.25;
-  color: #fff;
+  color: #79aec9;
 }
 
 h1 {
-  font-size: 2.5rem
+  font-size: 3.5rem
 }
 
 h2 {
@@ -4445,6 +4443,28 @@ a img {
   border: 0
 }
 
+/* a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+} */
+
+/* unvisited link */
+a:link {
+  color: #1D976C;
+}
+
+/* visited link */
+a:visited {
+  color: #4CB8C4;
+}
+
+/* mouse over link */
+a:hover {
+  color: #93F9B9;
+}
+
 sub, sup {
   line-height: 0
 }
@@ -4460,6 +4480,7 @@ sub, sup {
 }
 
 #particles-js .particles-js-canvas-el {
+  z-index: 1 !important;
   width: 100% !important;
   height: 100vh !important
 }
@@ -4500,7 +4521,7 @@ sub, sup {
 
 @media only screen and (min-width:550px) {
   .header .site-description {
-    font-size: 40px
+    font-size: 40px;
   }
 }
 
@@ -4585,10 +4606,11 @@ sub, sup {
   color: #4b5664
 }
 
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 #about {
   width: 90%;
   margin: 0 auto;
-  max-width: 960px
+  max-width: 70%
 }
 
 @media only screen and (min-width:550px) {
@@ -4625,7 +4647,8 @@ sub, sup {
 .user-details {
   text-align: center;
   color: #fff;
-  margin: 50px auto
+  margin: 50px auto;
+  max-width: 1000px
 }
 
 #projects {
@@ -4663,7 +4686,7 @@ sub, sup {
 }
 
 .user-projects p {
-  margin-right: 5px
+  margin-right: 50px
 }
 
 @media only screen and (min-width:550px) {
@@ -4693,11 +4716,20 @@ sub, sup {
   .images-left img {
     float: left
   }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .project-link {
-  display: inline-block;
-  margin: 10px 0;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 10px 0%;
   padding: 5px;
   color: #fff;
   background-color: transparent;
