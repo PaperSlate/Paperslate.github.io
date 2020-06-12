@@ -2,11 +2,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   new SweetScroll({/* some options */});
 
-  /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+   particlesJS.load(@dom-id, @path-json, @callback (optional));
   particlesJS('particles-js', {
     "particles": {
       "number": {
-        "value": 30,
+        "value": 130,
         "density": {
           "enable": true,
           "value_area": 800
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         "image": {
           "src": "img/github.svg",
-          "width": 100,
+          "width": 1ss00,
           "height": 100
         }
       },
