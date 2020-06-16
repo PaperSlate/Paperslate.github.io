@@ -9,6 +9,7 @@
   <meta name="description" content="Personal Website/Portfolio/Resume">
 
   <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/magnific-popup.css" media="screen" />
 </head>
 
   <body>
@@ -68,10 +69,14 @@
       <section id="projects">
         <div class="user-details">
   <h1> Previous Work </h1>
+  <h4 style="margin:-30px 0px">*Click an image for expanded view</h4>
+  <h1></h1>
 </div>
 <div class="user-projects">
   <div class="images-right">
-    <img alt="familytree" src="/assets/img/FamilyTree.jpg" />
+    <a href="/assets/img/FamilyTree.jpg" title="Example search usage" class="image-popups">
+      <img src="/assets/img/FamilyTree.jpg" alt="familytree" />
+    </a>
   </div>
   <div class="contents">
     <h3 style="text-align: center;"> Georgia Tech AKPsi Family Tree </h3>
@@ -87,7 +92,9 @@
 </div>
 <div class="user-projects">
   <div class="images-left">
-    <img alt="beatmaster" width="60%" style="margin:0px 20%" src="/assets/img/Beatmaster.png" />
+    <a href="/assets/img/Beatmaster.png" title="In-game image -- red particles show a missed beat, circle surrounding the player is the health bar, hourglass shows how much slow down time is left" class="image-popups">
+      <img width="60%" style="margin:0px 20%" src="/assets/img/Beatmaster.png" alt="beatmaster" />
+    </a>
   </div>
   <div class="contents-right">
     <h3 style="text-align: center;"> Beatmaster </h3>
@@ -100,12 +107,78 @@
     <p>Hit beats by tapping when crossing them! Track getting too fast? Slow down time by pressing on the left side of the screen, but be careful! You can only slow down time for so long... Play normally to regenerate the hourglass skill!</p>
   </div>
 </div>
+<div class="user-projects">
+  <div class="images-right">
+    <a href="/assets/img/CandyMap1.png" title="Choropleth map of Heath bar enjoyment by state" class="image-popups">
+      <img width="98%" style="margin:0px 5%" src="/assets/img/CandyMap1.png" alt="choropleth1" />
+    </a>
+    <a href="/assets/img/CandyMap2.png" title="Choropleth map comparing candy enjoyment between 2 states -- shows hovering over bubbles to see per-candy data for either state" class="image-popups">
+      <img width="98%" style="margin:10px 5%"  src="/assets/img/CandyMap2.png" alt="choropleth2" />
+    </a>
+  </div>
+  <div class="contents">
+    <h3 style="text-align: center;"> Candy Data Visualization </h3>
+    <ul>
+      <li><a href="https://d3js.org/">D3.js</a></li>
+      <li><a href="https://www.javascript.com/">Javascript</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVGs</a></li>
+    </ul>
+    <p>Choropleth map of candy data that shows relative enjoyment across the states for a candy when selected. Color-coded with smooth transition animations, first attempt at D3 development.</p>
+    <p>Select 2 states to compare their candy enjoyment (or dissatisfaction) on a candy-by-candy basis!</p>
+    <a class="project-link" href="https://github.com/PaperSlate/InfoVisP5">Check it out</a>
+  </div>
+</div>
+<div class="user-projects">
+  <div class="images-left">
+    <a href="/assets/img/Cubed.jpg" title="Gameplay with blocks falling from above" class="image-popups">
+      <img width="100%" style="margin:0px 5%" src="/assets/img/Cubed.jpg" alt="cubed" />
+    </a>
+  </div>
+  <div class="contents-right">
+    <h3 style="text-align: center;"> Cubed </h3>
+    <ul>
+      <li><a href="https://unity.com/">Unity</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/C_Sharp_(programming_language)">C#</a></li>
+      <li><a href="https://unity.com/features/mobile">Unity Mobile</a></li>
+    </ul>
+    <p>Unity mobile game in which you try to dodge blocks falling from the sky. Use your accelerometer to rotate and roll side to side and stay alive for as long as possible!</p>
+  </div>
+</div>
+<div class="user-projects">
+  <div class="images-right">
+    <a href="/assets/img/RagsToRiches.jpg" title="Main shop screen -- a helm is for sale for 10 coins - the customer is pleased (lightbulb) and is purchasing" class="image-popups">
+      <img width="100%" style="margin:0px 5%" src="/assets/img/RagsToRiches.jpg" alt="ragstoriches" />
+    </a>
+  </div>
+  <div class="contents">
+    <h3 style="text-align: center;"> Rags To Riches </h3>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Game_Boy_Advance">Game Boy Advance</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a></li>
+      <li><a href="https://www.stardewvalley.net/">Stardew Valley Sprites</a></li>
+    </ul>
+    <p>Game Boy Advance game where you play as a shopkeeper that has to make enough money each day in order to feed your family and get out of debt!</p>
+    <p>Learn the best prices from the customers, pay attention to how they react to the items you're selling, and try to make the most profit possible!</p>
+  </div>
+</div>
 
       </section>
         
-      <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+      <!-- <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+<script src="/assets/js/particles.js"></script>
 <script src="/assets/js/sweet-scroll.min.js"></script>
 <script src="/assets/js/main.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+  $(document).ready(function() {
+          $('.image-popups').magnificPopup({
+             type: 'image',
+             gallery:{enabled:true}
+             // other options
+          });
+       });
+</script>
 <!-- Google Analytics -->
 
 <script>

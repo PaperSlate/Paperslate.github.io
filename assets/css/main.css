@@ -4615,12 +4615,13 @@ sub, sup {
 
 @media only screen and (min-width:550px) {
   #about {
-    width: 80%
+    width: 60%
   }
 }
 
 .tech {
-  margin: 10px
+  margin: 10px;
+  max-width: 30%
 }
 
 .user {
@@ -4630,7 +4631,7 @@ sub, sup {
   flex-direction: row;
   flex-wrap: wrap;
   color: #fff;
-  justify-content: space-between
+  justify-content: space-evenly;
 }
 
 .user p {
@@ -4648,7 +4649,7 @@ sub, sup {
   text-align: center;
   color: #fff;
   margin: 50px auto;
-  max-width: 1000px
+  max-width: 65%
 }
 
 #projects {

@@ -88,7 +88,7 @@ var pJS = function(tag_id, params){
       array: []
     },
     interactivity: {
-      detect_on: 'canvas',
+      detect_on: 'window',
       events: {
         onhover: {
           enable: true,
@@ -96,7 +96,7 @@ var pJS = function(tag_id, params){
         },
         onclick: {
           enable: true,
-          mode: 'push'
+          mode: 'repulse'
         },
         resize: true
       },
@@ -1076,8 +1076,8 @@ var pJS = function(tag_id, params){
       pJS.interactivity.el.addEventListener('mousemove', function(e){
 
         if(pJS.interactivity.el == window){
-          var pos_x = e.clientX,
-              pos_y = e.clientY;
+          var pos_x = e.pageX,
+              pos_y = e.pageY;
         }
         else{
           var pos_x = e.offsetX || e.clientX,

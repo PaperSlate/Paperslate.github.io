@@ -113,4 +113,4 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
-}, false);
+}, true);

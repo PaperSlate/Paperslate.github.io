@@ -1,4 +1,16 @@
-<script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+<script src="{{ "/assets/js/particles.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/sweet-scroll.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script>
+  $(document).ready(function() {
+          $('.image-popups').magnificPopup({
+             type: 'image',
+             gallery:{enabled:true}
+             // other options
+          });
+       });
+</script>
 {% include google-analytics.html %}
